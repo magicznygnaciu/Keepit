@@ -1,0 +1,9 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Keepit:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Keepit_jar</output-path>
+    <root id="archive" name="Keepit.jar">
+      <element id="module-output" name="Keepit" />
+      <element id="extracted-dir" path="$MAVEN_REPOSITORY$/org/jsoup/jsoup/1.15.3/jsoup-1.15.3.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
