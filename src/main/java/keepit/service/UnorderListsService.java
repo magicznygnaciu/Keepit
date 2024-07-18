@@ -14,7 +14,7 @@ import java.util.Scanner;
 public class UnorderListsService {
 
     public String getLastElementFromLargestUnorderedList(){
-        String result = null;
+        String result;
         String url = getInputURL();
 
         //Actual logic of the method
@@ -48,10 +48,10 @@ public class UnorderListsService {
 
     public String getInputURL() {
         Scanner scanner = new Scanner(System.in);
-        String inputURL = null;
+        String inputURL;
         inputURL = scanner.nextLine();
 
-        while (isValidURL(inputURL) != true){
+        while (!isValidURL(inputURL)){
             System.out.println("Please provide valid URL");
             inputURL = scanner.nextLine();
         }
@@ -63,9 +63,7 @@ public class UnorderListsService {
         try {
             new URL(url).toURI();
             return true;
-        } catch (MalformedURLException e) {
-            return false;
-        } catch (URISyntaxException e) {
+        } catch (MalformedURLException | URISyntaxException e) {
             return false;
         }
     }
